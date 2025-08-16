@@ -1,6 +1,6 @@
 # ESP32 OLED ServerStats from Netdata
 
-![Alt text](media\oled-monitor.jpeg "Optional Title")
+![OLED Monitor](mediaoled-monitor.jpeg)
 
 This project allows an ESP32 microcontroller with a small OLED display to fetch and show system metrics from a FastAPI backend. The backend collects CPU, RAM, and network statistics and exposes them via an API endpoint (`/espdata`).  
 
@@ -107,3 +107,4 @@ Example response:
 - Netdata is used in this repo as a metric source for experimentation.
 - You can replace Netdata with `psutil` or other monitoring solutions with minimal changes.
 - The ESP32 code reads the JSON from /espdata and displays it on the OLED in real time.
+
