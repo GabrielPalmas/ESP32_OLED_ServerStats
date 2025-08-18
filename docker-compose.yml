@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  esp32-serverstats:
+    image: esp32-serverstats:latest
+    container_name: esp32serverstats
+    ports:
+      - "8080:8080"
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD-SHELL", "python -c 'import urllib.request; urllib.request.urlopen(\"http://localhost:8080/health\")' || exit 1"]
+      interval: 30s
+      timeout: 10s
+      retries: 2
+      start_period: 10s

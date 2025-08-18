@@ -25,6 +25,10 @@ def bytes_to_human(n_bytes):
         n_bytes /= 1024
     return f"{n_bytes:.1f} PB"
 
+@app.get("/health")
+def health():
+    return {"status": "ok"}
+
 @app.get("/espdata")
 async def espdata():
     async with httpx.AsyncClient(timeout=5.0) as client:

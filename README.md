@@ -50,6 +50,11 @@ docker build -t esp32-serverstats .
 docker run -d -p 8080:8080 esp32-serverstats
 ```
 
+or use Docker Compose to create the container
+``` bash
+docker compose up -d
+```
+
 3. The API will be available at:
 
 ``` bash
